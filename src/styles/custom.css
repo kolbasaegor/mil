@@ -1,0 +1,33 @@
+a {
+    color: black;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.crop-img {
+    object-fit: cover;
+    width: 100%;
+    height: 12rem;
+}
+
+.text-dec-none:hover {
+    text-decoration: none;
+}
+
+.main-content {
+    min-height: 100vh;
+    margin-bottom: 1rem;
+}
+
+.popper-element {
+    visibility: hidden;
+    z-index: 9999;
+}
+
+.popper-element[data-show="true"] {
+    visibility: visible;
+}
