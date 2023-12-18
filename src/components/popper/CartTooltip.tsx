@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/popper.css';
+import '../../styles/popper.css';
 
 const CartTooltip = ({amount, totalCost}) => {
   return (

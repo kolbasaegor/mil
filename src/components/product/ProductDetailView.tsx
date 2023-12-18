@@ -1,17 +1,51 @@
 import React from 'react'
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { useState } from 'react';
+import { usePopper } from 'react-popper';
+import AddProductTooltip from '../popper/AddProductTooltip';
 
 const ProductDetailView = ({product}) => {
     const dispatch = useDispatch();
+    const products = useSelector(state => state.products);
+    const [productInCart, setProductInCart] = useState(false);
+
+    const [referenceElement, setReferenceElement] = useState();
+    const [popperElement, setPopperElement] = useState();
+    const { styles, attributes } = usePopper(referenceElement, popperElement, {
+        placement: 'top',
+        modifiers: [
+        {
+            name: 'offset',
+            options: {
+            offset: [0, 8],
+            },
+        },
+        ]
+    });
   
     const addProductToCart = () => {
+        if (products.findIndex(product_ => product_.id === product.id) == -1) setProductInCart(false);
+        else setProductInCart(true);
+
+        popperElement.setAttribute('data-show', true);
+        setTimeout(() => popperElement.removeAttribute('data-show'), 2000);
+
         dispatch({
-        type: 'ADD_PRODUCT',
-        payload: product
+            type: 'ADD_PRODUCT',
+            payload: product
         })
     }
 
   return (
+    <>
+    <div
+        className='popper-element'
+        ref={setPopperElement}
+        style={styles.popper}
+        {...attributes.popper}
+    >
+        <AddProductTooltip warning={productInCart}/>
+    </div>
     <div className='row'>
         <div className='text-secondary mb-3'>
             <span className='me-2'>
@@ -32,7 +66,12 @@ const ProductDetailView = ({product}) => {
             <h5><span className='text-secondary'>{product.category} | </span> {product.name}</h5>
             <h4 className='text-success'>{product.price} ₽</h4>
             <div className='mb-3'>{product.description}</div>
-            <button onClick={addProductToCart} type="button" className="btn btn-dark w-100">
+            <button
+                onClick={addProductToCart}
+                ref={setReferenceElement}
+                type="button"
+                className="btn btn-dark w-100"
+            >
                 Add to cart
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="ms-2 bi bi-bag-plus" viewBox="0 0 16 16">
                 <path fillRule="evenodd" d="M8 7.5a.5.5 0 0 1 .5.5v1.5H10a.5.5 0 0 1 0 1H8.5V12a.5.5 0 0 1-1 0v-1.5H6a.5.5 0 0 1 0-1h1.5V8a.5.5 0 0 1 .5-.5"/>
@@ -41,6 +80,7 @@ const ProductDetailView = ({product}) => {
             </button>
         </div>
     </div>
+    </>
   )
 }
 

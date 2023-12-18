@@ -1,6 +1,6 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import CartTooltip from './CartTooltip';
+import CartTooltip from './popper/CartTooltip';
 import { useState } from 'react';
 import { usePopper } from 'react-popper';
 
@@ -27,7 +27,7 @@ const Navbar = () => {
   }
  
   const hideTooltip = () => {
-    popperElement.removeAttribute('data-show')
+    popperElement.removeAttribute('data-show');
   }
 
   return (
