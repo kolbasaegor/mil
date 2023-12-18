@@ -2,11 +2,13 @@ import React from 'react';
 import Navbar from '../components/Navbar';
 import TopProducts from '../components/product/TopProducts';
 import useDocumentTitle from '../hooks/useDocumentTitle';
+import Footer from '../components/Footer';
 
 const Main = () => {
   useDocumentTitle('Market');
 
   return (
+    <>
     <div className='container' style={{maxWidth: 70 + 'rem'}}>
       <Navbar />
       <div className='main-content'>
@@ -37,6 +39,8 @@ const Main = () => {
       <TopProducts limit={10}/>
       </div>
     </div>
+    <Footer/>
+    </>
   )
 }
 

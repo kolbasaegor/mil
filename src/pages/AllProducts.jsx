@@ -6,6 +6,7 @@ import ProductList from '../components/product/ProductList';
 import Spinner from '../components/Spinner';
 import ServerError from '../components/ServerError';
 import useDocumentTitle from '../hooks/useDocumentTitle';
+import Footer from '../components/Footer';
 
 const config = require('../config.json');
 
@@ -16,6 +17,7 @@ const AllProducts = () => {
   if (error) return <ServerError />;
 
   return (
+    <>
     <div className='container' style={{maxWidth: 70 + 'rem'}}>
       <Navbar />
       <div className='main-content'>
@@ -31,6 +33,8 @@ const AllProducts = () => {
         }
       </div>
     </div>
+    <Footer/>
+    </>
   )
 }
 

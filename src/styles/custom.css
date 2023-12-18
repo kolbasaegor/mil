@@ -20,14 +20,22 @@ a:hover {
 
 .main-content {
     min-height: 100vh;
-    margin-bottom: 1rem;
 }
 
 .popper-element {
     visibility: hidden;
+    opacity: 0;
     z-index: 9999;
+    transition: opacity .3s, visibility .3s;
 }
 
 .popper-element[data-show="true"] {
+    opacity: 1;
     visibility: visible;
+}
+
+.footer {
+    background: #333;
+    color: #ffffff;
+    width: 100%;
 }

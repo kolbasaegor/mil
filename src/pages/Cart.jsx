@@ -3,6 +3,7 @@ import Navbar from '../components/Navbar';
 import { useSelector } from 'react-redux';
 import ProductCartView from '../components/product/ProductCartView';
 import useDocumentTitle from '../hooks/useDocumentTitle';
+import Footer from '../components/Footer';
 
 const Cart = () => {
     useDocumentTitle('Cart');
@@ -10,6 +11,7 @@ const Cart = () => {
     const totalCost = useSelector(state => state.totalCost);
 
     return (
+        <>
         <div className='container' style={{maxWidth: 70 + 'rem'}}>
             <Navbar />
             <div className='main-content'>
@@ -56,6 +58,8 @@ const Cart = () => {
                 </div>
             </div>
         </div>
+        <Footer />
+        </>
     )
 }
 
