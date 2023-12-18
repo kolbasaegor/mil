@@ -2,7 +2,7 @@ import React from 'react';
 
 const ProductCard = ({product}) => {
   return (
-    <a href={`/product/${product.id}`} className='text-dec-none'>
+    <a href={`/stickmouse/product/${product.id}`} className='text-dec-none'>
         <div className='card' style={{width: 20 + 'rem', maxWidth: 100 + '%'}}>
             {product.path_to_img ?
                 <img src={product.path_to_img} className="card-img-top crop-img" alt=""></img> :

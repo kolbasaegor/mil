@@ -9,9 +9,6 @@ const Main = () => {
 
   return (
     <>
-    <div className='container' style={{maxWidth: 70 + 'rem'}}>
-      <Navbar />
-      <div className='main-content'>
       <div id="carouselExampleInterval" className="carousel slide" data-bs-ride="carousel">
         <div className="carousel-inner">
           <div className="carousel-item active" data-bs-interval="5000">
@@ -37,9 +34,6 @@ const Main = () => {
         <h2>MOST VIEWED PRODUCTS ON OUR SITE</h2>
       </div>
       <TopProducts limit={10}/>
-      </div>
-    </div>
-    <Footer/>
     </>
   )
 }

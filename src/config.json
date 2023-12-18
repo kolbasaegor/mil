@@ -1,3 +1,4 @@
 {
-    "API_URL": "http://193.108.113.39"
+    "API_URL": "http://193.108.113.39",
+    "BASE_URL": "stickmouse"
 }

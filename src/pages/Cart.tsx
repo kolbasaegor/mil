@@ -12,8 +12,6 @@ const Cart = () => {
 
     return (
         <>
-        <div className='container' style={{maxWidth: 70 + 'rem'}}>
-            <Navbar />
             <div className='main-content'>
                 <div className='container mt-4'>
                     <h4>Your Cart <span className='text-secondary fs-6'>{products.length} items</span></h4>
@@ -57,8 +55,6 @@ const Cart = () => {
                     </div>
                 </div>
             </div>
-        </div>
-        <Footer />
         </>
     )
 }

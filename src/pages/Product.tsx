@@ -22,8 +22,6 @@ const Product = () => {
 
     return (
         <>
-        <div className='container' style={{maxWidth: 70 + 'rem'}}>
-            <Navbar />
             <div className='main-content'>
                 {loading ? <Spinner /> :
                     <div className='container mt-5'>
@@ -31,8 +29,6 @@ const Product = () => {
                     </div>
                 }
             </div>
-        </div>
-        <Footer />
         </>
     )
 }

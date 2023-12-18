@@ -15,7 +15,7 @@ const ProductRowView = ({product}) => {
   return (
     <div className='row p-1' style={{minHeight: 250 + 'px'}}>
       <div className='col-sm-4'>
-        <a href={`/product/${product.id}`}>
+        <a href={`/stickmouse/product/${product.id}`}>
           {product.path_to_img ?
             <img src={product.path_to_img} alt="" className="rounded float-start img-fluid" />:
             <img src="https://upload.wikimedia.org/wikipedia/commons/d/d1/Image_not_available.png" alt="" className="rounded float-start img-fluid" />
@@ -25,7 +25,7 @@ const ProductRowView = ({product}) => {
       <div className='col-sm-6 mb-3'>
         <h5>
           <span className="badge bg-success me-2">{product.price} ₽</span> 
-          <a href={`/product/${product.id}`}>{product.name}</a>
+          <a href={`/stickmouse/product/${product.id}`}>{product.name}</a>
         </h5>
         <div className='text-secondary'>{product.category}</div>
         <div>

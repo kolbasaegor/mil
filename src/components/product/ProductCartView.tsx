@@ -15,7 +15,7 @@ const ProductCartView = ({product}) => {
   return (
     <div className='row p-1' style={{minHeight: 200 + 'px'}}>
       <div className='col-sm-3'>
-        <a href={`/product/${product.id}`}>
+        <a href={`/stickmouse/product/${product.id}`}>
           {product.path_to_img ?
             <img src={product.path_to_img} alt="" className="rounded float-start img-fluid" />:
             <img src="https://upload.wikimedia.org/wikipedia/commons/d/d1/Image_not_available.png" alt="" className="rounded float-start img-fluid" />
@@ -25,7 +25,7 @@ const ProductCartView = ({product}) => {
       <div className='col-sm-9 mb-3'>
         <h6>
           <span className="badge bg-success me-2">{product.price} ₽</span> 
-          <a href={`/product/${product.id}`}>{product.name}</a>
+          <a href={`/stickmouse/product/${product.id}`}>{product.name}</a>
         </h6>
         <button onClick={removeProductFromCart} type="button" className="btn btn-outline-dark mt-2">
             Remove from

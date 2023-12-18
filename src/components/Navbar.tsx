@@ -31,7 +31,7 @@ const Navbar = () => {
   }
 
   return (
-    <>
+    <div className='container' style={{maxWidth: 70 + 'rem'}}>
     <div
       className='popper-element'
       ref={setPopperElement}
@@ -42,7 +42,7 @@ const Navbar = () => {
     </div>
     <nav className="navbar navbar-expand-lg">
         <div className="container-fluid">
-          <a className="navbar-brand" href="/">
+          <a className="navbar-brand" href="/stickmouse">
             <img src="https://upload.wikimedia.org/wikipedia/commons/9/98/The_Simpsons_yellow_logo.svg" width={70} alt="" />
           </a>
 
@@ -53,15 +53,15 @@ const Navbar = () => {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                 <li className="nav-item">
-                    <a className="nav-link" href="/">Main</a>
+                    <a className="nav-link" href="/stickmouse">Main</a>
                 </li>
                 <li className="nav-item">
-                    <a className="nav-link" href="/all">All Products</a>
+                    <a className="nav-link" href="/stickmouse/all">All Products</a>
                 </li>
             </ul>
             <div className="d-flex">
                 <div className="me-3 align-self-center">
-                    <a href='/cart' style={{color: '#000'}}>
+                    <a href='/stickmouse/cart' style={{color: '#000'}}>
                         <div
                           className='position-relative'
                           onMouseEnter={showTooltip}
@@ -89,7 +89,7 @@ const Navbar = () => {
           </div>
         </div>
     </nav>
-    </>
+    </div>
   )
 }
 

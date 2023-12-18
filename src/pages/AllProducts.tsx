@@ -18,8 +18,6 @@ const AllProducts = () => {
 
   return (
     <>
-    <div className='container' style={{maxWidth: 70 + 'rem'}}>
-      <Navbar />
       <div className='main-content'>
         {loading ? <Spinner /> :
           <div className='container mt-4'>
@@ -32,8 +30,6 @@ const AllProducts = () => {
           </div>
         }
       </div>
-    </div>
-    <Footer/>
     </>
   )
 }
