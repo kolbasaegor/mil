@@ -16,7 +16,7 @@ const Cart = () => {
                 <div className='container mt-4'>
                     <h4>Your Cart <span className='text-secondary fs-6'>{products.length} items</span></h4>
                     <div className='row'>
-                        <div className='col-sm-8'>
+                        <div className='col-sm-8 mb-5'>
                         {products.length > 0 ?
                             products.map(product =>
                             <div key={product.id}>

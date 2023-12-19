@@ -43,7 +43,7 @@ const Navbar = () => {
     <nav className="navbar navbar-expand-lg">
         <div className="container-fluid">
           <a className="navbar-brand" href="/stickmouse">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/9/98/The_Simpsons_yellow_logo.svg" width={70} alt="" />
+            <img src="https://img.freepik.com/premium-vector/wild-boar-pig-drawing_186119-86.jpg?w=2000" width={50} alt="" />
           </a>
 
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -60,7 +60,7 @@ const Navbar = () => {
                 </li>
             </ul>
             <div className="d-flex">
-                <div className="me-3 align-self-center">
+                <div className="align-self-center">
                     <a href='/stickmouse/cart' style={{color: '#000'}}>
                         <div
                           className='position-relative'
@@ -84,7 +84,6 @@ const Navbar = () => {
                         </div>
                     </a>
                 </div>
-                <button type="button" className="btn btn-outline-dark">Sign In</button>
             </div>
           </div>
         </div>
